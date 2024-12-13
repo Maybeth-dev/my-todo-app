@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./to-DO app.css">
+    <title>To-Do App</title>
+</head>
+<body>
+
+    <div class="app-container">
+        <h2>To-Do App</h2>
+
+        <label for="task-input">Task</label>
+        <input type="text" id="task-input" placeholder="Enter your task" required>
+
+        <label for="date-input">Date</label>
+        <input type="date" id="date-input" required>
+
+        <label for="description-input">Description</label>
+        <textarea id="description-input" rows="4" placeholder="Comments..." required></textarea>
+
+        <button id="addButton" onclick="addTask()">Add Task</button>
+        <button id="updateButton" style="display: none;" onclick="updateTask()">Update Task</button>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>S/N</th>
+                    <th>Task</th>
+                    <th>Date</th>
+                    <th>Description</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="show">
+                <!-- Tasks will be added dynamically here -->
+            </tbody>
+        </table>
+    </div>
+    <script src="./to-DO app.js"> </script>
+</body>
+</html>
